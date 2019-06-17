@@ -4,7 +4,7 @@
   "description": "Display the top three repositories for a given language in the past month",
   "main": "index.js",
   "scripts": {
-    "test": "lerna run test",
+    "test": "jest",
     "test-serve": "cd ./packages/app-backend && npm start"
   },
   "author": "Adam Crockett",

@@ -1,7 +1,7 @@
 {
-  "name": "github-star-component-stars",
+  "name": "github-star-component-title",
   "version": "1.0.0",
-  "description": "A component to display a star icon and count from a data sourse",
+  "description": "Display a heading and description from any data source",
   "main": "index.js",
   "directories": {
     "test": "test"

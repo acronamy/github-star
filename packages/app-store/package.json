@@ -1,0 +1,14 @@
+{
+  "name": "github-star-app-store",
+  "version": "1.0.0",
+  "description": "Manages state of this application, In its own package in case state management needs change",
+  "main": "component-store.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "../../node_modules/.bin/jest"
+  },
+  "author": "Adam Crockett",
+  "license": "ISC"
+}

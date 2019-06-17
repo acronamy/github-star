@@ -1,7 +1,7 @@
 {
-  "name": "github-star-component-stars",
+  "name": "github-star-component-date",
   "version": "1.0.0",
-  "description": "A component to display a star icon and count from a data sourse",
+  "description": "formats dates in tense",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -10,5 +10,5 @@
     "test": "../../node_modules/.bin/jest"
   },
   "author": "Adam Crockett",
-  "license": "MIT"
+  "license": "ISC"
 }
