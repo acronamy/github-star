@@ -1,0 +1,17 @@
+# dependencies
+.pnp.js
+/.pnp
+/node_modules
+
+# production
+/build
+
+# other
+.DS_Store
+.env.development.local
+.env.local
+.env.production.local
+.env.test.local
+
+npm-debug.log*
+lerna-debug.log

@@ -1,0 +1,14 @@
+{
+  "name": "github-star-component-stars",
+  "version": "1.0.0",
+  "description": "A component to display a star icon and count from a data sourse",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adam Crockett",
+  "license": "ISC"
+}

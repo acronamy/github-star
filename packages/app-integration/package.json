@@ -1,0 +1,12 @@
+{
+  "name": "simple-integration-test-server",
+  "version": "1.0.0",
+  "description": "Just a simple server used to serve this React app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Adam Crockett",
+  "license": "ISC"
+}
