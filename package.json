@@ -2,16 +2,16 @@
   "name": "github-star-monorepo",
   "version": "1.0.0",
   "description": "Display the top three repositories for a given language in the past month",
-  "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "test-serve": "cd ./packages/app-backend && npm start"
+    "test": "npm run test-serve & jest",
+    "test-serve": "cd ./packages/app-integration && npm start"
   },
   "author": "Adam Crockett",
   "license": "MIT",
   "devDependencies": {
     "jest": "^24.8.0",
-    "lerna": "^2.5.1"
+    "lerna": "^2.5.1",
+    "puppeteer": "^1.17.0"
   },
   "engines": {
     "node": ">=8.0.0",

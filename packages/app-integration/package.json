@@ -3,6 +3,13 @@
   "version": "1.0.0",
   "description": "Just a simple server used to serve this React app",
   "main": "index.js",
+  "config": {
+    "server": {
+      "hostname": "localhost",
+      "protocol": "http://",
+      "port": "3030"
+    }
+  },
   "scripts": {
     "start": "node index.js"
   },
