@@ -1,4 +1,4 @@
-const { isUnsigned } = require("./format-utils");
+const { isUnsigned } = require('./format-utils');
 
 
 /*

@@ -1,6 +1,7 @@
-const { previousRelativeMonthDay, getMonthLength, datePad } = require('../utils/time-utils')
+const { previousRelativeMonthDay, datePad } = require('../utils/time-utils')
 const { writeFile, readFile, stat, readdir, unlink } = require('fs');
 const { resolve, join } = require('path');
+const { URLSearchParams } = require('url');
 const fetch = require('node-fetch');
 
 const CACHE_PATH = resolve(__dirname, '../cache');
@@ -17,11 +18,11 @@ class GithubStarService {
     this._selectedYear = this._date.getFullYear();
     this._requestStarDataDefaultParams = {
       resultsNumber: 3,
-      language: "JavaScript"
+      language: 'JavaScript'
     }
   }
   _hasCache (cacheFileName) {
-    const PATH = join(CACHE_PATH, `${cacheFileName.replace("..", "--")}.json`);
+    const PATH = join(CACHE_PATH, `${cacheFileName.replace('..', '--')}.json`);
     return new Promise(resolve => {
       stat(PATH, (err)=>{
         if (err) {
@@ -57,7 +58,7 @@ class GithubStarService {
       readdir(CACHE_PATH, (err, directory) => {
         // ignore dot files
         let oldCaches = directory
-          .filter(file => file[0] !== ".")
+          .filter(file => file[0] !== '.')
           .filter(file => file.includes(language));
         for(const cacheFile of oldCaches) {
           unlink(join(CACHE_PATH, cacheFile), err => {
@@ -77,7 +78,7 @@ class GithubStarService {
     });
   }
   async response(json, cacheFileName) {
-    const PATH = join(CACHE_PATH, `${cacheFileName.replace("..", "--")}.json`);
+    const PATH = join(CACHE_PATH, `${cacheFileName.replace('..', '--')}.json`);
     if (json === null) {
       return await this._readCache(PATH);
     } else {

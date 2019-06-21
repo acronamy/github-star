@@ -10,18 +10,18 @@ const { hostname, protocol, port } = config.server;
 // True constants
 const APP_URL = `${protocol}://${hostname}:${port}`;
 
-describe("Automated acceptance tests", () => {
-  test("should check that app is served.", async () => {
+describe('Automated acceptance tests', () => {
+  test('should check that app is served.', async () => {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
     await page.goto(APP_URL);
     await page.screenshot({ path: 'screenshots/app.png' });
     await browser.close();
   });
-  test("Check the Github Search Api is available", async () => {
+  test('Check the Github Search Api is available', async () => {
     // Arrange
     const URL = 'https://api.github.com/';
-    const BAD_DATA_IF_MESSAGE = "message";
+    const BAD_DATA_IF_MESSAGE = 'message';
     // Act
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
