@@ -4,11 +4,16 @@
   "description": "Display the top three repositories for a given language in the past month",
   "scripts": {
     "test": "npm run dev-serve & jest",
-    "dev-serve": "cd ./packages/app && npm start"
+    "dev-serve": "cd ./packages/app && npm start",
+    "lint-browser": "npx eslint -c ./.eslintrc.browser.json packages/component-*/**/*.js packages/app-state/**/*.js",
+    "lint-node": "npx eslint -c ./.eslintrc.node.json packages/app/**/*.js"
   },
   "author": "Adam Crockett",
   "license": "MIT",
   "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-plugin-jest": "^22.7.0",
+    "eslint-plugin-react": "^7.13.0",
     "jest": "^24.8.0",
     "lerna": "^2.5.1",
     "puppeteer": "^1.17.0"

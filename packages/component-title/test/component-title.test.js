@@ -1,3 +1,3 @@
-test("Should display a heading and description", () => {
+test('Should display a heading and description', () => {
 
 });

@@ -1,3 +1,3 @@
-test("Should display star counter", () => {
+test('Should display star counter', () => {
 
 });
