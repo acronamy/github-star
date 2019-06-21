@@ -3,10 +3,12 @@ const { resolve } = require('path');
 const { readFile } = require('fs');
 const { createServer } = require('http');
 
+// True constants
 const HTTP_ERROR_CODE = 500;
 const PORT = config.server.port;
 const TEMPLATES_PATH = resolve(__dirname, 'public');
 
+// Simple server
 const requestHandler = (request, response) => {
   readFile(resolve(TEMPLATES_PATH, 'index.html'), (err, html) => {
     if (err) {
