@@ -6,13 +6,17 @@
   "config": {
     "server": {
       "hostname": "localhost",
-      "protocol": "http://",
+      "protocol": "http",
       "port": "3030"
     }
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "npm run start & cd ../../ && node_modules/.bin/jest"
   },
   "author": "Adam Crockett",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^2.6.0"
+  }
 }
