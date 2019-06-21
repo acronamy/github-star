@@ -1,12 +1,13 @@
 # Application
 screenshots/*.png
 **/cache/*.json
-# dependencies
+
+# Dependencies
 .pnp.js
 /.pnp
 /node_modules
 
-# production
+# Production
 /build
 
 # Other
@@ -18,8 +19,6 @@ screenshots/*.png
 
 npm-debug.log*
 lerna-debug.log
-
-
 
 # Logs
 logs
