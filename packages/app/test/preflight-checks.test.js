@@ -33,6 +33,7 @@ describe('Automated acceptance tests', () => {
     });
     // Assert
     if (BAD_DATA_IF_MESSAGE in JSON_RES) {
+      // eslint-disable-next-line
       fail(JSON_RES[BAD_DATA_IF_MESSAGE]);
     }
 
