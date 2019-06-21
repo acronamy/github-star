@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Display the top three repositories for a given language in the past month",
   "scripts": {
-    "test": "npm run test-serve & jest",
-    "test-serve": "cd ./packages/app-integration && npm start"
+    "test": "npm run dev-serve & jest",
+    "dev-serve": "cd ./packages/app-integration && npm start"
   },
   "author": "Adam Crockett",
   "license": "MIT",
