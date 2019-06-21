@@ -64,4 +64,4 @@ module.exports = {
   daysUntilMonthEnd,
   previousRelativeMonthDay,
   datePad
-}
+};

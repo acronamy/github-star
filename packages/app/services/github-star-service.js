@@ -1,4 +1,4 @@
-const { previousRelativeMonthDay, datePad } = require('../utils/time-utils')
+const { previousRelativeMonthDay, datePad } = require('../utils/time-utils');
 const { writeFile, readFile, stat, readdir, unlink } = require('fs');
 const { resolve, join } = require('path');
 const { URLSearchParams } = require('url');
@@ -19,7 +19,7 @@ class GithubStarService {
     this._requestStarDataDefaultParams = {
       resultsNumber: 3,
       language: 'JavaScript'
-    }
+    };
   }
   _hasCache (cacheFileName) {
     const PATH = join(CACHE_PATH, `${cacheFileName.replace('..', '--')}.json`);
@@ -44,7 +44,7 @@ class GithubStarService {
       writeFile(path, JSON.stringify(toCache, null, 2), err => {
         if (err) throw err;
         resolve();
-      })
+      });
     });
   }
   /**
@@ -64,7 +64,7 @@ class GithubStarService {
           unlink(join(CACHE_PATH, cacheFile), err => {
             if (err) throw err;
             resolve();
-          })
+          });
         }
       });
     });
@@ -105,12 +105,12 @@ class GithubStarService {
       year,
       month: datePad(month),
       day: datePad(day)
-    }
+    };
     const to = {
       year: this._date.getFullYear(),
       month: datePad(this._date.getMonth() + 1),
       day: datePad(this._date.getDate())
-    }
+    };
     const HOST = 'https://api.github.com/';
     const ENDPOINT = 'search/repositories';
     const MONTH_RANGE = `${from.year}-${from.month}-${from.day}..${to.year}-${to.month}-${to.day}`;
@@ -158,12 +158,12 @@ class GithubStarService {
       year: this._selectedYear,
       month: this._selectedMonth,
       day: this._selectedDay
-    })
+    });
     yield {
       year: this._selectedYear,
       month: this._selectedMonth,
       day: relativeMonthDay
-    }
+    };
   }
 }
 

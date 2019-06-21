@@ -81,7 +81,7 @@ describe('datePad', () => {
   test('should pad n with 0n', () => {
     expect(datePad(1)).toBe('01');
     expect(datePad(10)).toBe('10');
-  })
+  });
 });
 
 describe('isUnsigned', ()=> {
@@ -97,4 +97,4 @@ describe('isUnsigned', ()=> {
   test('negative zero (not valid) should be unsigned', () => {
     expect(isUnsigned(-0)).toBe(true);
   });
-})
+});

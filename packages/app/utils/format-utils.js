@@ -6,4 +6,4 @@ module.exports = {
     isUnsigned(n) {
         return /^\+?(0|[1-9]\d*)$/.test((n).toString());
     },
-}
+};
