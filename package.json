@@ -8,8 +8,7 @@
     "lint-browser": "npx eslint -c ./.eslintrc.browser.json packages/component-*/**/*.js packages/app-state/**/*.js --fix",
     "lint-node": "npx eslint -c ./.eslintrc.node.json packages/app/**/*.js --fix",
     "lint-all": "npm run lint-browser && npm run lint-node",
-    "ci": "lerna bootstrap && lurna run ci",
-    "install": "lerna bootstrap",
+    "postinstall": "lerna bootstrap",
     "clean": "lerna clean"
   },
   "author": "Adam Crockett",
