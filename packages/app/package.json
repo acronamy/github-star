@@ -11,12 +11,16 @@
     }
   },
   "scripts": {
-    "start": "node index.js",
-    "test": "npm run start & cd ../../ && node_modules/.bin/jest"
+    "open-port": "kill-port --port $npm_package_config_server_port",
+    "serve": "npm run open-port && node index.js",
+    "test": "npm run serve & npx jest"
   },
   "author": "Adam Crockett",
   "license": "ISC",
   "dependencies": {
     "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "kill-port": "^1.5.1"
   }
 }

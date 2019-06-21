@@ -2,6 +2,11 @@
  * @file Leverages pupeteer to check that the app is served and the api is returning the data in principle based on the query we will be using
  */
 
+// Allow acceptance test to work standalone
+if ( process.cwd().includes('packages') ) {
+  process.chdir('../../')
+}
+
 const puppeteer = require('puppeteer');
 const { config } = require('../package.json');
 
