@@ -11,15 +11,14 @@
     }
   },
   "scripts": {
-    "open-port": "kill-port --port $npm_package_config_server_port",
+    "open-port": "packages/app/node_modules/kill-port/cli.js --port $npm_package_config_server_port",
     "serve": "npm run open-port && node index.js",
     "test": "npm run serve & npx jest"
   },
   "author": "Adam Crockett",
   "license": "ISC",
   "dependencies": {
-    "node-fetch": "^2.6.0",
-    "kill-port": "^1.5.1"
+    "node-fetch": "^2.6.0"
   },
   "devDependencies": {
     "kill-port": "^1.5.1"
