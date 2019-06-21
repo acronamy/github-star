@@ -1,7 +1,7 @@
 {
-  "name": "simple-integration-test-server",
+  "name": "github-star-server",
   "version": "1.0.0",
-  "description": "Just a simple server used to serve this React app",
+  "description": "Node server with github star service to provice for the React app",
   "main": "index.js",
   "config": {
     "server": {
