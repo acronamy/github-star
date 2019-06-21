@@ -117,7 +117,7 @@ describe("Getting data", () => {
       expect(day).toBe(14);
     });
     /**
-     * @see packages/app-integration/utils/time-utils.js
+     * @see packages/app/utils/time-utils.js
      * tests this functionality in full but this test is double checking the wrapper works
     */
     test("If today is the 31st of Mar, the day returned should be the 29th of Feb - depending on leap years", () => {
