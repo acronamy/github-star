@@ -9,7 +9,7 @@
     "lint-node": "npx eslint -c ./.eslintrc.node.json packages/app/**/*.js --fix",
     "lint-all": "npm run lint-browser && npm run lint-node",
     "clean": "lerna clean",
-    "postinstall": "npm i packages/*"
+    "postinstall": "npm i ./packages/*"
   },
   "author": "Adam Crockett",
   "license": "MIT",
@@ -24,5 +24,13 @@
   "engines": {
     "node": ">=8.0.0",
     "npm": ">=6.0.0"
+  },
+  "dependencies": {
+    "github-star-app-store": "file:packages/app-state",
+    "github-star-component-date": "file:packages/component-date",
+    "github-star-component-stars": "file:packages/component-stars",
+    "github-star-component-title": "file:packages/component-title",
+    "github-star-server": "file:packages/app",
+    "global-style": "file:packages/global-style"
   }
 }
