@@ -9,7 +9,7 @@
     "lint-node": "npx eslint -c ./.eslintrc.node.json packages/app/**/*.js --fix",
     "lint-all": "npm run lint-browser && npm run lint-node",
     "clean": "lerna clean",
-    "ci": "npm i packages/*"
+    "postinstall": "npm i packages/*"
   },
   "author": "Adam Crockett",
   "license": "MIT",
