@@ -11,8 +11,7 @@
     }
   },
   "scripts": {
-    "open-port": "npx kill-port --port $npm_package_config_server_port",
-    "serve": "npm run open-port && node index.js",
+    "serve": "node index.js",
     "test": "npm run serve & npx jest"
   },
   "author": "Adam Crockett",

@@ -4,7 +4,7 @@
 
 // Allow acceptance test to work standalone
 if ( process.cwd().includes('packages') ) {
-  process.chdir('../../')
+  process.chdir('../../');
 }
 
 const puppeteer = require('puppeteer');

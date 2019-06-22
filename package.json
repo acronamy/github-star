@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Display the top three repositories for a given language in the past month",
   "scripts": {
-    "test": "npm run dev-serve & npx jest && npm run lint-all",
-    "dev-serve": "lerna run serve --scope=github-star-server",
+    "test": "npm run dev-serve & jest",
+    "dev-serve": "npm run serve --prefix ./packages/app",
     "lint-browser": "npx eslint -c ./.eslintrc.browser.json packages/component-*/**/*.js packages/app-state/**/*.js --fix",
     "lint-node": "npx eslint -c ./.eslintrc.node.json packages/app/**/*.js --fix",
     "lint-all": "npm run lint-browser && npm run lint-node",
