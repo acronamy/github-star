@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "description": "Display the top three repositories for a given language in the past month",
   "scripts": {
-    "test": "npm run dev-serve & jest",
+    "test": "npm run dev-serve & jest && npm run lint-all-ci",
     "dev-serve": "npm run serve --prefix ./packages/app",
-    "lint-browser": "npx eslint -c ./.eslintrc.browser.json packages/component-*/**/*.js packages/app-state/**/*.js --fix",
-    "lint-node": "npx eslint -c ./.eslintrc.node.json packages/app/**/*.js --fix",
-    "lint-all": "npm run lint-browser && npm run lint-node",
+    "lint-browser-fix": "npx eslint -c ./.eslintrc.browser.json packages/component-*/**/*.js packages/app-state/**/*.js --fix",
+    "lint-node-fix": "npx eslint -c ./.eslintrc.node.json packages/app/**/*.js --fix",
+    "lint-browser-ci": "npx eslint -c ./.eslintrc.browser.json packages/component-*/**/*.js packages/app-state/**/*.jS",
+    "lint-node-ci": "npx eslint -c ./.eslintrc.node.json packages/app/**/*.js",
+    "lint-all-ci": "npm run lint-browser-ci && npm run lint-node-ci",
     "clean": "lerna clean",
     "postinstall": "npm i ./packages/*"
   },
