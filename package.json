@@ -5,11 +5,11 @@
   "scripts": {
     "test": "npm run dev-serve & jest && npm run lint-all-ci",
     "build": "node fuse",
-    "dev-serve": "npm run serve --prefix ./packages/app",
+    "dev-serve": "npm run serve --prefix ./packages/app-server ",
     "lint-browser-fix": "npx eslint -c ./.eslintrc.browser.json packages/component-*/**/*.js packages/app-state/**/*.js --fix",
-    "lint-node-fix": "npx eslint -c ./.eslintrc.node.json packages/app/**/*.js --fix",
+    "lint-node-fix": "npx eslint -c ./.eslintrc.node.json packages/app-server/**/*.js --fix",
     "lint-browser-ci": "npx eslint -c ./.eslintrc.browser.json packages/component-*/**/*.js packages/app-state/**/*.js",
-    "lint-node-ci": "npx eslint -c ./.eslintrc.node.json packages/app/**/*.js",
+    "lint-node-ci": "npx eslint -c ./.eslintrc.node.json packages/app-server/**/*.js",
     "lint-all-ci": "npm run lint-browser-ci && npm run lint-node-ci",
     "clean": "lerna clean",
     "postinstall": "npm i ./packages/*"

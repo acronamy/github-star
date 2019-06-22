@@ -1,0 +1,25 @@
+{
+  "name": "github-star-server",
+  "version": "1.0.0",
+  "description": "Node server with github star service to provice for the React app",
+  "main": "index.js",
+  "config": {
+    "server": {
+      "hostname": "localhost",
+      "protocol": "http",
+      "port": "3030"
+    }
+  },
+  "scripts": {
+    "serve": "node index.js",
+    "test": "npm run serve & npx jest"
+  },
+  "author": "Adam Crockett",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "kill-port": "^1.5.1"
+  }
+}

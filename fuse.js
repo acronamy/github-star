@@ -1,7 +1,7 @@
 const { FuseBox, SassPlugin, CSSPlugin, HTMLPlugin, BabelPlugin } = require("fuse-box");
 
 const fuse = FuseBox.init({
-  homeDir: "src",
+  homeDir: "packages",
   output: "build/$name.js",
   target: "browser@es6",
   plugins: [
