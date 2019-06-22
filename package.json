@@ -4,7 +4,7 @@
   "description": "Display the top three repositories for a given language in the past month",
   "scripts": {
     "test": "npm run dev-serve & npx jest && npm run lint-all",
-    "dev-serve": "npm run serve --prefix ./packages/app",
+    "dev-serve": "lerna run serve --scope=github-star-server",
     "lint-browser": "npx eslint -c ./.eslintrc.browser.json packages/component-*/**/*.js packages/app-state/**/*.js --fix",
     "lint-node": "npx eslint -c ./.eslintrc.node.json packages/app/**/*.js --fix",
     "lint-all": "npm run lint-browser && npm run lint-node",
