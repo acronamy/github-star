@@ -1,4 +1,5 @@
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
+[![Build Status](https://travis-ci.org/acronamy/github-star.svg?branch=master)](https://travis-ci.org/acronamy/github-star)
 
 # Github star
 
