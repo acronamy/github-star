@@ -5,6 +5,7 @@
   "scripts": {
     "test": "npm run dev-serve & jest && npm run lint-all-ci",
     "build": "node fuse",
+    "preview-serve": "node ./build/index.js",
     "dev-serve": "npm run serve --prefix ./packages/app-server ",
     "lint-browser-fix": "npx eslint -c ./.eslintrc.browser.json packages/component-*/**/*.js packages/app-state/**/*.js --fix",
     "lint-node-fix": "npx eslint -c ./.eslintrc.node.json packages/app-server/**/*.js --fix",
@@ -28,6 +29,7 @@
     "fuse-box": "^3.7.1",
     "jest": "^24.8.0",
     "lerna": "^2.5.1",
+    "ncp": "^2.0.0",
     "node-sass": "^4.12.0",
     "postcss": "^7.0.16",
     "puppeteer": "^1.17.0",
