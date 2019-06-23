@@ -40,11 +40,12 @@
     "npm": ">=6.0.0"
   },
   "dependencies": {
-    "github-star-app-store": "file:packages/app-state",
+    "app": "file:packages/app",
+    "github-star-app-state": "file:packages/app-state",
     "github-star-component-date": "file:packages/component-date",
     "github-star-component-stars": "file:packages/component-stars",
     "github-star-component-title": "file:packages/component-title",
-    "github-star-server": "file:packages/app",
+    "github-star-server": "file:packages/app-server",
     "global-style": "file:packages/global-style"
   }
 }
