@@ -1,0 +1,14 @@
+.str {
+  &-Stars {
+    display: flex;
+    align-items: center;
+
+    &_Text {
+      margin-left: .8em;
+    }
+
+    &_Icon {
+      fill: #333;
+    }
+  }
+}

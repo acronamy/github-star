@@ -1,0 +1,22 @@
+@import '../global-style/vars';
+
+.str {
+  &-Title {
+    margin-bottom: $y-spacing;
+
+    &_Text {
+      font-size: 1.4em;
+      margin-top: 0;
+      margin-bottom: .3em;
+    }
+
+    &_Language {
+      text-transform: capitalize;
+
+      &:before,
+      &:after {
+        content: "'";
+      }
+    }
+  }
+}

@@ -122,7 +122,7 @@ class GithubStarService {
     params.append('sort', 'stars');
 
     const URL = `${HOST}${ENDPOINT}?${TOPIC}&${params}`;
-    const CACHE_FILE_NAME = `${language}--${MONTH_RANGE}`;
+    const CACHE_FILE_NAME = `${language.toLowerCase()}--${MONTH_RANGE}`;
     const cacheExists = await this._hasCache(CACHE_FILE_NAME);
 
     if (parseInt(resultsNumber) !== 3) {
