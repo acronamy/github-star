@@ -1,25 +1,36 @@
-const { FuseBox, SassPlugin, CSSResourcePlugin } = require("fuse-box");
+const { FuseBox, SassPlugin, RawPlugin } = require("fuse-box");
 const { task } = require("fuse-box/sparky");
 const { ncp } = require('ncp');
 
+const PROD = true;
+
 const fuse = FuseBox.init({
-  homeDir: "packages/app",
+  homeDir: "./",
   output: "build/public/script/$name.js",
   target: "browser@es6",
+  sourceMaps: !PROD,
   useTypescriptCompiler: true,
+  alias: {
+    "react": "~/node_modules/react/index",
+    "react-dom": "~/node_modules/react-dom/index",
+    "redux": "~/node_modules/redux/dist/redux.min",
+    "react-redux": "~/node_modules/react-redux/dist/react-redux.min"
+  },
+  allowSyntheticDefaultImports: true,
   plugins: [
     [
-      SassPlugin(),
-      CSSResourcePlugin({
-        dist: "build/public/style"
-      })
+      SassPlugin({
+        outputStyle: "compressed",
+      }),
+      RawPlugin()
     ]
   ]
 });
 
 fuse
   .bundle("github-star")
-  .instructions(`> app.jsx`);
+  .cache(false)
+  .instructions(`> ./packages/app/app.jsx`);
 
 task("default", () => {
   ncp("packages/app-server", "build", {
