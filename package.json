@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Display the top three repositories for a given language in the past month",
   "scripts": {
-    "test": "npm run dev-serve & jest && npm run lint-all-ci",
+    "test": "npm run dev-serve & jest && npm run lint-all-ci && npm run build",
     "build": "node fuse",
     "preview-serve": "node ./build/index.js",
     "dev-serve": "npm run serve --prefix ./packages/app-server ",
