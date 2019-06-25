@@ -1,0 +1,30 @@
+.str {
+  &-List {
+    &_List {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+    }
+
+    &_Item {
+      margin-bottom: 2em;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &_Description {
+      margin-bottom: .4em;
+      margin-top: .6em;
+      line-height: 1.6;
+    }
+
+    &_Footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}

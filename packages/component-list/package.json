@@ -1,0 +1,14 @@
+{
+  "name": "github-star-component-list",
+  "version": "1.0.0",
+  "description": "Display some list items",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "npx jest"
+  },
+  "author": "Adam Crockett",
+  "license": "MIT"
+}
