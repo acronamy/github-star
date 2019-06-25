@@ -1,2 +1,10 @@
 @import "../global-style/index.scss";
 @import "../global-style/global.scss";
+
+.str {
+  &-Panel {
+    max-width: 365px;
+    border: 2px solid #222;
+    padding: 2em 1em;
+  }
+}
