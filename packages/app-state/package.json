@@ -2,7 +2,7 @@
   "name": "github-star-app-state",
   "version": "1.0.0",
   "description": "Manages state of this application, In its own package in case state management needs change",
-  "main": "component-store.js",
+  "main": "store.js",
   "directories": {
     "test": "test"
   },
@@ -10,5 +10,11 @@
     "test": "npx jest"
   },
   "author": "Adam Crockett",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "redux": "^4.0.1"
+  },
+  "devDependencies": {
+    "react-redux": "^7.1.0"
+  }
 }
