@@ -74,7 +74,7 @@ After installing, postinstall runs `npm i ./packages/*`, unfortunatly lerna wont
 Most packages contain tests suites which can run independently but a dev or preview server must be running on port `:3030`
 
 ### Repo notes
-This repo is managed by lerna, to find out more about monorepos check this out: https://hackernoon.com/one-vs-many-why-we-moved-from-multiple-git-repos-to-a-monorepo-and-how-we-set-it-up-f4abb0cfe469
+This repo is managed by lerna, to find out more about monorepos check this out: [This Hackernoon post](https://hackernoon.com/one-vs-many-why-we-moved-from-multiple-git-repos-to-a-monorepo-and-how-we-set-it-up-f4abb0cfe469)
 
 All work carried out on master branch.
 
