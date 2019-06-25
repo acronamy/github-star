@@ -76,6 +76,8 @@ Most packages contain tests suites which can run independently but a dev or prev
 ### Repo notes
 This repo is managed by lerna, to find out more about monorepos check this out: https://hackernoon.com/one-vs-many-why-we-moved-from-multiple-git-repos-to-a-monorepo-and-how-we-set-it-up-f4abb0cfe469
 
+All work carried out on master branch.
+
 ### Design notes
 #### Backend
 A [node.js](https://nodejs.org/en/) backend, containing a single [isomorphic](https://www.lullabot.com/articles/what-is-an-isomorphic-application) service which fetches details about a given language from the top 3 (although more are possible) in the last relative month from today.
