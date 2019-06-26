@@ -19,6 +19,7 @@ const SELECTOR = '.str-Date';
 describe('Automated acceptance tests', () => {
   // en-GB iso is hard coded
   test('Should display a date: numeric (D) / long (M) / numeric (Y).', async () => {
+    jest.setTimeout(10000);
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
     await page.goto(APP_URL);

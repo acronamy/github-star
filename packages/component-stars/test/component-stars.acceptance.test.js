@@ -18,6 +18,7 @@ const SELECTOR = '.str-Stars';
 
 describe('Automated acceptance tests', () => {
   test('Should display star counter.', async () => {
+    jest.setTimeout(10000);
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
     await page.goto(APP_URL);

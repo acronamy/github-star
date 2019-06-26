@@ -18,6 +18,7 @@ const SELECTOR = '.str-List';
 
 describe('Automated acceptance tests', () => {
   test('Should display a list item which holds a description, date, link and star counter.', async () => {
+    jest.setTimeout(10000);
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
     await page.goto(APP_URL);

@@ -18,6 +18,7 @@ const SELECTOR = '.str-Title';
 
 describe('Automated acceptance tests', () => {
   test('Should display a heading and description.', async () => {
+    jest.setTimeout(10000);
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
     await page.goto(APP_URL);

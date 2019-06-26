@@ -17,6 +17,7 @@ const APP_URL = `${protocol}://${hostname}:${port}`;
 
 describe('Automated acceptance tests', () => {
   test('should check that app is served.', async () => {
+    jest.setTimeout(10000);
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
     await page.goto(APP_URL);
