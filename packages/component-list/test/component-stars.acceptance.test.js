@@ -8,19 +8,22 @@ if ( process.cwd().includes('packages') ) {
 }
 
 const puppeteer = require('puppeteer');
-const { config } = require('../package.json');
+const { config } = require('../../app-server/package.json');
 
 const { hostname, protocol, port } = config.server;
 
 // True constants
-const APP_URL = `${protocol}://${hostname}:${port}`;
+const APP_URL = `${protocol}://${hostname}:${port}/JavaScript`;
+const SELECTOR = '.str-List';
 
 describe('Automated acceptance tests', () => {
-  test('should check that app is served.', async () => {
+  test('Should display a list item which holds a description, date, link and star counter.', async () => {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
     await page.goto(APP_URL);
-    await page.screenshot({ path: 'screenshots/chrome__app.png' });
+    await page.waitForSelector(SELECTOR);
+    const el = await page.$(SELECTOR);
+    await el.screenshot({ path: 'screenshots/chrome__component-list.png' });
     await browser.close();
   });
 });

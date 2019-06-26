@@ -8,19 +8,23 @@ if ( process.cwd().includes('packages') ) {
 }
 
 const puppeteer = require('puppeteer');
-const { config } = require('../package.json');
+const { config } = require('../../app-server/package.json');
 
 const { hostname, protocol, port } = config.server;
 
 // True constants
-const APP_URL = `${protocol}://${hostname}:${port}`;
+const APP_URL = `${protocol}://${hostname}:${port}/JavaScript`;
+const SELECTOR = '.str-Date';
 
 describe('Automated acceptance tests', () => {
-  test('should check that app is served.', async () => {
+  // en-GB iso is hard coded
+  test('Should display a date: numeric (D) / long (M) / numeric (Y).', async () => {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
     await page.goto(APP_URL);
-    await page.screenshot({ path: 'screenshots/chrome__app.png' });
+    await page.waitForSelector(SELECTOR);
+    const el = await page.$(SELECTOR);
+    await el.screenshot({ path: 'screenshots/chrome__component-date.png' });
     await browser.close();
   });
 });
