@@ -1,7 +1,9 @@
+@import "../global-style/vars.scss";
+
 .str {
   &-Date {
     &_Text {
-      color: #525252;
+      color: $mid-grey;
     }
   }
 }

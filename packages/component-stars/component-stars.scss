@@ -1,14 +1,16 @@
+@import "../global-style/vars.scss";
+
 .str {
   &-Stars {
-    display: flex;
     align-items: center;
+    display: flex;
 
     &_Text {
       margin-left: .8em;
     }
 
     &_Icon {
-      fill: #333;
+      fill: $dark-grey;
     }
   }
 }
