@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "npx jest"
+    "test": "npx jest --runInBand"
   },
   "author": "Adam Crockett",
   "license": "ISC"

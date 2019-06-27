@@ -12,7 +12,7 @@
   },
   "scripts": {
     "serve": "node index.js",
-    "test": "npm run serve & npx jest"
+    "test": "npm run serve & npx jest --runInBand"
   },
   "author": "Adam Crockett",
   "license": "ISC",
