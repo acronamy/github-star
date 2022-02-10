@@ -30,7 +30,7 @@
     "jest": "^24.8.0",
     "lerna": "^2.5.1",
     "ncp": "^2.0.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "postcss": "^7.0.16",
     "puppeteer": "^1.17.0",
     "typescript": "^3.5.2"
